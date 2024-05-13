@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+       
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .map {
+            flex: 1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styling for the body */
+body {
+    background:#F5DAD2;/* Background color */
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label.logo {
+    color: #555;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #555;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #555;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    label.logo {
+        padding: 0;
+    }
+
+    nav ul {
+        position: fixed;
+        right: 0;
+        height: 80vh;
+        top: 80px;
+        background: #78A083;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .checkbtn {
+        display: block;
+        cursor: pointer;
+    }
+
+    #check:checked ~ ul {
+        transform: translateX(0);
+    }
+    @media (max-width: 952px){
+        label.logo{
+            font-size: 20px;
+            padding-left: 40px;
+        }
+        nav ul li a{
+            font-size: 16px;
+        }
+        body.lock-scroll {
+            overflow-y: hidden;
+        }
+    }
+    @media (max-width: 852px){
+        .checkbtn{
+            display: block;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #78A083;
+            top:80px;
+            left: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: block;
+        }
+        body.lock-scroll {
+            overflow-y: hidden;
+        }
+    }
+    /* For screens with a maximum width of 600px */
+@media (max-width: 600px) {
+    .image-container img {
+        display: none; /* Hide only the image */
+    }
+}
+
+}
+footer {
+    background-color: #fff;
+    color: #555;
+    margin-top: 15px;
+    padding: 30px;
+   
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">Taste Buds</label>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reserve.html">Reserve</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Location:</strong> We are located inside The Courtyard!</p>
+            <p><strong>Hours:</strong></p>
+            <ul>
+                <li><strong>Wednesday:</strong> Dinner Only (6pm, 7:30pm, 9pm)</li>
+                <li><strong>Thursday - Sunday:</strong> Lunch (12:30pm, 2:00pm, 3:30pm), Dinner (6:00pm, 7:30pm, 9pm)</li>
+            </ul>
+            <p><strong>Phone:</strong> (+91) 7397281745</p>
+            <p><strong>Email:</strong> info@tastebuds.com</p>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4098631161282!2d78.7197502102639!3d10.77988748932473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf4c983348525%3A0x64a59e9129834752!2sPonmalaipatti%2C%20Adaikala%20Annai%20Nagar%2C%20Thirunagar%2C%20Tiruchirappalli%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1714311585890!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Taste Buds. All rights reserved.</p>
+    </footer>
+</body>
+</html>
