@@ -1,0 +1,145 @@
+body, html {
+   
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow-y: hidden; /* Disable vertical scrolling */
+    
+}
+
+.slider {
+    position: relative;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease; /* Fade effect */
+}
+
+.active {
+    opacity: 1; /* Show active slide */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire slide */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 50%;
+    font-size: 28px; /* Adjust font size as needed */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure buttons are above slider content */
+    opacity: 0.8; /* Semi-transparent */
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#prevBtn {
+    left: 20px;
+}
+
+#nextBtn {
+    right: 20px;
+}
+.navbar {
+    overflow: hidden;
+    background-color:  rgba(122, 178, 178, 0.9);
+    padding: 10px;
+  }
+  
+  .menu-toggle {
+    display: none; /* Initially hide the menu icon */
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    background-color: white;
+    display: block;
+    height: 3px;
+    margin: 4px 10px;
+    transition: 0.4s;
+    width: 25px;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    float: left;
+  }
+  
+  .nav-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    background-color: #EEF7FF;
+    color: black;
+    border-radius: 50px;
+  }
+  h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 4px 10px;
+    color:#EEF7FF;
+    font-weight: bold ;
+  }
+  
+  /* Responsive layout - change the navbar to a vertical stack on small screens */
+  @media screen and (max-width: 600px) {
+    .nav-list {
+      display: none; /* Hide the navigation links by default */
+    }
+  
+    .menu-toggle {
+      display: block; /* Show the menu icon */
+    }
+  
+    .nav-list.active {
+      display: block; /* Show the navigation links when menu icon is clicked */
+    }
+  }
+  
